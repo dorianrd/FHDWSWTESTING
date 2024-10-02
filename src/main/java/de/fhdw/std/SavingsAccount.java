@@ -12,7 +12,7 @@ public class SavingsAccount extends BankAccount {
     public void withdraw(double amount) {
         checkAmountIsPositive(amount);
 
-        if (amount >= balance) {
+        if (amount > balance) {
             throw new InsufficientFundsException();
         }
         balance -= amount;
